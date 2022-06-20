@@ -1,31 +1,30 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-        <img alt="Vue logo" class="vuelogo img-fluid" src="./assets/logo.png">
-      </div>
-      <div class="col-6 align-self-center">
-        <h1>VakantieKiezer</h1>
-      </div>
-    </div>
-
-    <VacationPicker />
-  </div>
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+  </nav>
+  <router-view/>
 </template>
 
-<script>
-import VacationPicker from './components/VacationPicker.vue'
-
-export default {
-  name: 'App',
-  components: {
-    VacationPicker
-  }
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
-</script>
 
-<!--<style>
-  .vuelogo {
-    height: 10%;
-  }
-</style>-->
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style>
